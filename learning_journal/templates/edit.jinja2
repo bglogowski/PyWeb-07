@@ -1,16 +1,18 @@
-{% extends "templates/layout.jinja2" %}
+{% extends "layout.jinja2" %}
 {% block body %}
-<form method="POST">
+<h2>{{action|capitalize}} a Journal Entry</h2>
+<form action="" method="POST">
 {% for field in form %}
   {% if field.errors %}
     <ul>
     {% for error in field.errors %}
-        <li>{{ error }}</li>
+        <li>{{error}}</li>
     {% endfor %}
     </ul>
   {% endif %}
-    <p>{{ field.label }}: {{ field }}</p>
+    <p>{{field.label}}: {{field}}</p>
 {% endfor %}
-    <p><input type="submit" name="submit" value="Submit" /></p>
+    <p><input class="button" type="submit" name="submit" value="Submit" /></p>
 </form>
+<p><a class="button" href="{{request.route_url('home')}}">Go Back</a></p>
 {% endblock %}

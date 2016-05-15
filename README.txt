@@ -8,7 +8,7 @@ Getting Started
 
 - $VENV/bin/python setup.py develop
 
-- $VENV/bin/initialize_learning_journal_db development.ini
+- $VENV/bin/setup_db development.ini
 
 - $VENV/bin/pserve development.ini
 

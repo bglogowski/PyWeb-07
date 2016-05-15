@@ -1,4 +1,8 @@
-from pyramid.security import Allow, Everyone, Authenticated
+from pyramid.security import (
+    Allow,
+    Everyone,
+    Authenticated,
+    )
 
 class EntryFactory(object):
     __acl__ = [
